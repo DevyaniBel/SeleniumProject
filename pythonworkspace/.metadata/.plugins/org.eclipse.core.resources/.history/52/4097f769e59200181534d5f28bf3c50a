@@ -1,0 +1,9 @@
+package com.demo.oops.abstraction;
+
+public class StringInstrument {
+
+	public StringInstrument() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

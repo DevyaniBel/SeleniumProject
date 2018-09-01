@@ -1,0 +1,25 @@
+package com.demo.collections.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+//import java.util.List;
+
+
+public class ArraylistExercide implements Cloneable {
+
+	public static void main(String[] args) {
+
+		//ArrayList y = new ArrayList();
+		//List<Object> list_Strings = new ArrayList<Object>();
+		List<String> list_Strings = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_Strings.add("Orange");
+		list_Strings.add("Orange");
+		list_Strings.add("Black");
+		list_Strings.add("");
+		list_Strings.add("Blue");
+		System.out.println(list_Strings);
+	}
+
+}

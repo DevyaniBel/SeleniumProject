@@ -1,0 +1,9 @@
+package com.demo.collecttions.Hashmap;
+
+public class HahMapExample {
+
+	public HahMapExample() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

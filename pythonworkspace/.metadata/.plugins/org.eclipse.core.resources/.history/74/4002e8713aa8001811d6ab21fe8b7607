@@ -1,0 +1,9 @@
+package com.demo.collecttions.Hashmap;
+
+public class SampleChromeLaunch {
+
+	public SampleChromeLaunch() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

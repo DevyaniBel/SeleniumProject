@@ -1,0 +1,9 @@
+package com.demo.oops.abstraction;
+
+public class ElectricGuitar {
+
+	public ElectricGuitar() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,137 @@
+package com.demo.collections.ArrayList;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+//import java.util.List;
+
+
+public class ArraylistExercide implements Cloneable {
+
+	public static void main(String[] args) {
+
+		//ArrayList y = new ArrayList();
+		//List<Object> list_Strings = new ArrayList<Object>();
+		List<String> list_Strings = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_Strings.add("Orange");
+		list_Strings.add("Orange");
+		list_Strings.add("Black");
+		list_Strings.add(""); //instance method because called by object
+		list_Strings.add("Blue");
+		System.out.println(list_Strings);
+
+		List<String> list_StringsItr = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsItr.add("Orange");
+		list_StringsItr.add("Orange");
+		list_StringsItr.add("Black");
+		list_StringsItr.add("Blue");
+
+		for (String element : list_StringsItr) {
+			System.out.println(element);
+		}
+
+		/*Insert an ele in first and last element*/
+		//create list and add some colors into list
+		List<String> list_StringsPosition = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsPosition.add("Orange");
+		list_StringsPosition.add("Orange");
+		list_StringsPosition.add("Black");
+		list_StringsPosition.add("Blue");
+		System.out.println(list_StringsPosition);
+
+		list_StringsPosition.add(0, "Pink");
+		list_StringsPosition.add(3, "Yellow");
+
+		System.out.println(list_StringsPosition);
+
+
+		// to retreive the element
+
+		List<String> list_StringsRetrieve = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsRetrieve.add("Orange");
+		list_StringsRetrieve.add("Orange");
+		list_StringsRetrieve.add("Black");
+		list_StringsRetrieve.add("Blue");
+		System.out.println(list_StringsRetrieve);
+
+		//REtrieve first and third element
+
+		String element = list_StringsRetrieve.get(0);
+		System.out.println("First element " + element);
+
+		element = list_StringsRetrieve.get(3);
+		System.out.println("Second element " + element);
+
+		//to update the element
+		List<String> list_StringsUpdate = new ArrayList<String>();
+		list_StringsUpdate.add("Orange");
+		list_StringsUpdate.add("Orange");
+		list_StringsUpdate.add("Black");
+		list_StringsUpdate.add("Blue");
+		System.out.println(list_StringsUpdate);
+		list_StringsUpdate.set(2, "white");
+		System.out.println(list_StringsUpdate);
+
+		//to remove element
+		List<String> list_StringsRemove = new ArrayList<String>();
+		list_StringsRemove.add("Orange");
+		list_StringsRemove.add("Orange");
+		list_StringsRemove.add("Black");
+		list_StringsRemove.add("Blue");
+		System.out.println(list_StringsRemove);
+		list_StringsRemove.remove(2);
+		System.out.println("After removing element print again "+list_StringsRemove);
+
+		//search an emelent in the list
+		List<String> list_StringsSearch = new ArrayList<String>();
+		list_StringsSearch.add("Orange");
+		list_StringsSearch.add("Orange");
+		list_StringsSearch.add("Black");
+		list_StringsSearch.add("Blue");
+
+
+		if(list_StringsSearch.contains("Blue")) {
+			System.out.println("found elemenet");
+		}else {
+			System.out.println("There is no such elemnt");
+		}
+
+///sort the element
+		List<String> list_StringsSort = new ArrayList<String>();
+		list_StringsSort.add("Orange");
+		list_StringsSort.add("Orange");
+		list_StringsSort.add("Black");
+		list_StringsSort.add("Blue");
+		System.out.println("before "+ list_StringsSort);
+		Collections.sort(list_StringsSort);
+		System.out.println("After"+list_StringsSort );
+
+//copy list 1 to list2
+		List<String> List1 = new ArrayList<String>();
+		List1.add("1");
+		List1.add("2");
+		List1.add("3");
+		List1.add("4");
+		List1.add("5");
+		System.out.println("List 1 "+ List1);
+		List<String> List2 = new ArrayList<String>();
+		List2.add("a");
+		List2.add("b");
+		List2.add("c");
+		List2.add("d");
+		List2.add("e");
+		System.out.println("List 2 " + List2);
+		Collections.copy(List1, List2);
+		System.out.println("Print List after copy");
+		System.out.println(List1);
+		System.out.println(List2);
+	}
+}

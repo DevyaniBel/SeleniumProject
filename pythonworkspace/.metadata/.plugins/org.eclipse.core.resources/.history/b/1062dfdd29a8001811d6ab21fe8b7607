@@ -1,0 +1,76 @@
+package com.demo.collecttions.Hashmap;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapExample {
+
+	public static void main(String[] args) 
+	{
+
+		Map<String, Integer> certificationCost=new HashMap<>();
+		certificationCost.put("ISTQB",7000);
+		certificationCost.put("ISTQB1",7000);
+		certificationCost.put("CSTE", 11000);
+		certificationCost.put("ocpjp", 18000);
+		certificationCost.put("NSE", 2000);
+		certificationCost.put("Agile", 16000);
+		// lets try to remove element from Hashmap using Map.remove(Object Key)	method // this will not work, will throw error
+		Set<String> setOfCertifications= certificationCost.keySet();
+		//Map- before removing a mapping System.out.println("before: "+certificationCost);  // Lets use iterator to remove
+		Iterator<String> iterator=setOfCertifications.iterator();
+		System.out.println(certificationCost);
+		while(iterator.hasNext())
+		{
+			String certification=iterator.next();
+			if(certification.contains("OCMJEA")) {
+				iterator.remove();
+			}
+		}
+		System.out.println("after "+certificationCost);
+	//--------------------------------------------------------------
+	
+	//Associate specific value
+	
+	HashMap<Integer, String> hash_map = new HashMap<Integer, String>();	
+	hash_map.put(1, "Red");
+	hash_map.put(2, "Blue");
+	hash_map.put(3, "Yellow");
+	hash_map.put(4, "Pink");
+	hash_map.put(5, "Black");
+	
+	System.out.println("The size of Hashmap is: "+ hash_map.size());
+	for (Map.Entry x:hash_map.entrySet()) {
+		System.out.println(x.getKey()+" "+ x.getValue());
+	}
+	/*---------copy from one map to another map------------------------------------------------*/
+
+	HashMap <Integer,String> hash_map1 = new HashMap <Integer,String> ();
+	HashMap <Integer,String> hash_map2 = new HashMap <Integer,String> ();
+	// populate hash maps
+	hash_map1.put(1, "Red");
+	hash_map1.put(2, "Green");
+	hash_map1.put(3, "Black");
+	System.out.println("\nValues in first map: " + hash_map1);
+	hash_map2.put(4, "White");
+	hash_map2.put(5, "Blue");
+	hash_map2.put(6, "Orange");
+	System.out.println("\nValues in second map: " + hash_map2);
+
+	// put all values in secondmap
+	hash_map2.putAll(hash_map1);
+	System.out.println("\nNow values in second map: " + hash_map2);
+	hash_map2.clear(); // To clear all the mapping from hashmap
+	System.out.println("size of second map: " + hash_map2);
+	// check if map is empty
+	boolean result = hash_map2.isEmpty();// to check whether hashmap is empty or not
+	// check the result
+	System.out.println("Is hash map empty: " + result);
+	}
+	//-------------------------
+
+	
+	
+	

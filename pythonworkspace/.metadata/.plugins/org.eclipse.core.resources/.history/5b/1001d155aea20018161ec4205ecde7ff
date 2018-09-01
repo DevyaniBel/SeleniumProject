@@ -1,0 +1,73 @@
+package com.demo.collections.ArrayList;
+
+import java.util.ArrayList;
+import java.util.List;
+//import java.util.List;
+
+
+public class ArraylistExercide implements Cloneable {
+
+	public static void main(String[] args) {
+
+		//ArrayList y = new ArrayList();
+		//List<Object> list_Strings = new ArrayList<Object>();
+		List<String> list_Strings = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_Strings.add("Orange");
+		list_Strings.add("Orange");
+		list_Strings.add("Black");
+		list_Strings.add(""); //instance method because called by object
+		list_Strings.add("Blue");
+		System.out.println(list_Strings);
+
+		List<String> list_StringsItr = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsItr.add("Orange");
+		list_StringsItr.add("Orange");
+		list_StringsItr.add("Black");
+		list_StringsItr.add("Blue");
+
+		for (String element : list_StringsItr) {
+			System.out.println(element);
+		}
+
+		/*Insert an ele in first and last element*/
+		//create list and add some colors into list
+		List<String> list_StringsPosition = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsPosition.add("Orange");
+		list_StringsPosition.add("Orange");
+		list_StringsPosition.add("Black");
+		list_StringsPosition.add("Blue");
+		System.out.println(list_StringsPosition);
+
+		list_StringsPosition.add(0, "Pink");
+		list_StringsPosition.add(3, "Yellow");
+
+		System.out.println(list_StringsPosition);
+
+
+		// to retreive the element
+
+		List<String> list_StringsRetrieve = new ArrayList<String>();
+		//List<Integer> list_Strings = new ArrayList<Integer>();
+		//list_Strings.add(100);
+		list_StringsRetrieve.add("Orange");
+		list_StringsRetrieve.add("Orange");
+		list_StringsRetrieve.add("Black");
+		list_StringsRetrieve.add("Blue");
+		System.out.println(list_StringsRetrieve);
+
+		//REtrieve first and third element
+
+		String element = list_StringsRetrieve.get(0);
+		System.out.println("First element " + element);
+
+		element = list_StringsRetrieve.get(3);
+		System.out.println("Second element " + element);
+
+	}
+}
